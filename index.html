@@ -7,10 +7,10 @@
   <meta name="description" content="Mastermind Financial Advisors — Mumbai's trusted MSME loan advisory firm. Helping MSMEs raise capital swiftly from leading national banks. Founded by Aparna Kulkarni." />
   <link rel="icon" href="img/logo/business_logo.png" type="image/png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Fonts: Roboto variable weight + Playfair Display for headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -78,7 +78,9 @@ html {
   text-size-adjust: 100%;
 }
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
   background: var(--cream);
   color: var(--text-dark);
   line-height: 1.65;
@@ -104,7 +106,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border-gold);
   border-radius: 100px;
   padding: 6px 16px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -136,6 +138,7 @@ a { text-decoration: none; color: inherit; }
   -webkit-text-fill-color: transparent;
 }
 .section-sub {
+  font-family: 'Roboto', sans-serif;
   font-size: 1.05rem;
   color: var(--text-mid);
   max-width: 600px;
@@ -158,13 +161,13 @@ a { text-decoration: none; color: inherit; }
   gap: 8px;
   padding: 14px 28px;
   border-radius: var(--radius-sm);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
   border: none;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
 }
 .btn-navy {
   background: var(--navy);
@@ -222,11 +225,11 @@ a { text-decoration: none; color: inherit; }
 }
 #navbar.scrolled {
   padding: 10px 0;
-  background: rgba(244,246,249,0.96);
+  background: rgba(250,250,250,0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 20px rgba(30,42,58,0.06);
+  box-shadow: 0 2px 20px rgba(45,46,42,0.07);
 }
 .nav-inner {
   display: flex;
@@ -328,7 +331,8 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 90px;
+  padding-bottom: 60px;
 }
 
 /* Soft light geometric overlay */
@@ -359,8 +363,8 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 80px;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
   align-items: center;
   width: 100%;
 }
@@ -391,12 +395,12 @@ a { text-decoration: none; color: inherit; }
 
 .hero-h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 700;
   color: var(--navy);
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 @keyframes heroDot {
   0%,100% { transform: scale(1); opacity: 1; }
@@ -412,17 +416,20 @@ a { text-decoration: none; color: inherit; }
 }
 
 .hero-sub {
-  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
   color: var(--text-mid);
-  max-width: 520px;
+  max-width: 500px;
   line-height: 1.75;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 14px;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 /* Stats strip — light card */
@@ -444,7 +451,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-stat:last-child { border-right: none; }
 .hero-stat-n {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 800;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
@@ -493,7 +500,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 6px;
 }
 .hero-card-value {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--navy);
@@ -648,7 +655,7 @@ a { text-decoration: none; color: inherit; }
 .f-badge-icon { font-size: 1.6rem; flex-shrink: 0; }
 .f-badge-text strong {
   display: block;
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--green-light);
@@ -854,7 +861,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .svc-name {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--navy);
@@ -917,13 +924,13 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.9rem;
   font-weight: 800;
   color: var(--white);
 }
 .why-body h4 {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.97rem;
   font-weight: 700;
   color: var(--navy);
@@ -1018,7 +1025,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 700;
   color: var(--navy);
   line-height: 1.35;
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .bank-type {
   font-size: 0.68rem;
@@ -1062,7 +1069,7 @@ a { text-decoration: none; color: inherit; }
   transform: scale(1.03);
 }
 .achievement-subtitle {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--gold);
@@ -1122,7 +1129,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 16px 26px;
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--navy);
@@ -1203,7 +1210,7 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.3s ease;
 }
 .client-wordmark {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: var(--text-light);
   opacity: 0.7;
@@ -1279,7 +1286,7 @@ a { text-decoration: none; color: inherit; }
 }
 .testi-author strong {
   display: block;
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--navy);
@@ -1505,7 +1512,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid rgba(255,255,255,0.11);
   border-radius: var(--radius-sm);
   padding: 13px 15px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.92rem;
   color: var(--white);
   outline: none;
@@ -1554,7 +1561,7 @@ footer {
 .ft-contacts a { color: var(--gold-light); }
 .ft-contacts a:hover { text-decoration: underline; }
 .ft-col h5 {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
