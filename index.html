@@ -283,9 +283,9 @@ a { text-decoration: none; color: inherit; }
 
 .nav-links a:hover::after { transform: scaleX(1); }
 
-/* Hero state nav links — white */
-#navbar:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.88); }
-#navbar:not(.scrolled) .nav-links a:hover { color: var(--white); }
+/* Hero state nav links — stays dark since hero is now light */
+#navbar:not(.scrolled) .nav-links a { color: var(--navy); }
+#navbar:not(.scrolled) .nav-links a:hover { color: var(--gold); }
 
 .nav-cta-wrap { margin-left: 8px; flex-shrink: 0; }
 
@@ -314,14 +314,14 @@ a { text-decoration: none; color: inherit; }
   border-radius: 2px;
   transition: all 0.3s;
 }
-#navbar:not(.scrolled) .hamburger span { background: var(--white); }
+#navbar:not(.scrolled) .hamburger span { background: var(--navy); }
 
 /* ================================================================
-   HERO — Deep navy bg so it's dramatic + cream content below
+   HERO — Light fresh background using off-white + sky-blue
 ================================================================ */
 #hero {
   min-height: 100vh;
-  background: var(--navy);
+  background: var(--cream);
   position: relative;
   display: flex;
   align-items: center;
@@ -329,23 +329,23 @@ a { text-decoration: none; color: inherit; }
   padding-top: 80px;
 }
 
-/* Geometric warm overlay */
+/* Soft light geometric overlay */
 .hero-geo {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 65% 65% at 80% 35%, rgba(219,84,97,0.20) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 50% at 15% 75%, rgba(138,162,158,0.18) 0%, transparent 55%),
-    linear-gradient(155deg, #2D2E2A 0%, #3E3F3A 45%, #1E1F1C 100%);
+    radial-gradient(ellipse 70% 70% at 80% 20%, #E3F2FD 0%, transparent 55%),
+    radial-gradient(ellipse 55% 55% at 10% 80%, rgba(219,84,97,0.07) 0%, transparent 55%),
+    linear-gradient(160deg, #FAFAFA 0%, #EDF6FE 55%, #E3F2FD 100%);
 }
-/* Subtle dot grid */
+/* Subtle dot grid on light bg */
 .hero-dots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(104,105,99,0.10) 1px, transparent 1px);
   background-size: 32px 32px;
 }
-/* Gold accent line */
+/* Coral accent top line */
 .hero-accent-line {
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -367,22 +367,23 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(219,84,97,0.18);
-  border: 1px solid rgba(155,123,196,0.35);
+  background: #FFFFFF;
+  border: 1px solid rgba(219,84,97,0.28);
   border-radius: 100px;
   padding: 7px 18px 7px 10px;
   margin-bottom: 28px;
+  box-shadow: 0 2px 10px rgba(219,84,97,0.10);
 }
 .hero-dot {
   width: 8px; height: 8px;
-  background: var(--green-light);
+  background: var(--gold);
   border-radius: 50%;
   animation: heroDot 2s ease-in-out infinite;
 }
 .hero-badge-text {
   font-size: 0.75rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.9);
+  color: var(--navy);
   letter-spacing: 0.06em;
 }
 
@@ -390,7 +391,7 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.6rem, 5.5vw, 4.4rem);
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy);
   line-height: 1.08;
   letter-spacing: -0.01em;
   margin-bottom: 24px;
@@ -410,7 +411,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-sub {
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.7);
+  color: var(--text-mid);
   max-width: 520px;
   line-height: 1.75;
   margin-bottom: 40px;
@@ -422,21 +423,21 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 60px;
 }
 
-/* Stats strip */
+/* Stats strip — light card */
 .hero-stats-row {
   display: flex;
   gap: 0;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: #FFFFFF;
+  border: 1px solid rgba(104,105,99,0.14);
   border-radius: var(--radius-md);
   overflow: hidden;
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 24px rgba(45,46,42,0.08);
   max-width: 500px;
 }
 .hero-stat {
   flex: 1;
   padding: 18px 20px;
-  border-right: 1px solid rgba(255,255,255,0.07);
+  border-right: 1px solid rgba(104,105,99,0.10);
   text-align: center;
 }
 .hero-stat:last-child { border-right: none; }
@@ -453,58 +454,58 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-stat-l {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--text-light);
   font-weight: 500;
 }
 
-/* Hero right — decorative card */
+/* Hero right — light cards */
 .hero-visual {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 .hero-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: #FFFFFF;
+  border: 1px solid rgba(104,105,99,0.13);
   border-radius: var(--radius-md);
   padding: 20px 24px;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(45,46,42,0.06);
   transition: all 0.3s ease;
 }
 .hero-card:hover {
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(219,84,97,0.3);
+  border-color: rgba(219,84,97,0.30);
   transform: translateX(4px);
+  box-shadow: 0 6px 28px rgba(219,84,97,0.10);
 }
 .hero-card--highlight {
-  background: rgba(219,84,97,0.14);
-  border-color: rgba(155,123,196,0.3);
+  background: rgba(219,84,97,0.06);
+  border-color: rgba(219,84,97,0.22);
 }
-.hero-card-label--accent { color: var(--gold-light); }
+.hero-card-label--accent { color: var(--gold); }
 .hero-card-label {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--gold);
   margin-bottom: 6px;
 }
 .hero-card-value {
   font-family: 'Sora', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy);
 }
 .hero-card-sub {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--text-light);
   margin-top: 4px;
 }
 .hc-icon {
   float: right;
   font-size: 1.4rem;
   margin-top: -4px;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* ================================================================
